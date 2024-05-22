@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .li-hover {
+    @apply hover:text-lime-400  transition-all duration-300 hover:transition-all hover:duration-300;
+  }
+  .card-div {
+    @apply max-lg:justify-center  max-lg:py-4 max-lg:w-[346px]   mb-10  bg-stone-900 transition-colors  duration-300 hover:transition-colors hover:duration-300  cursor-pointer hover:bg-white/10  w-[300px] h-[370px]  rounded-md flex flex-col justify-start items-center gap-4 pt-10;
+  }
+  .container-card-div {
+    @apply md:grid-cols-2  gap-8  grid lg:grid-cols-3  max-md:flex max-md:flex-col max-md:justify-center  max-md:items-center max-lg:items-center;
+  }
+  .project-div {
+    @apply md:w-full max-md:w-full max-md:h-[260px] relative hover:scale-95 bg-white  w-[330px] h-[280px] rounded-lg flex flex-col gap-4 px-4 py-6   hover:transition-all hover:duration-300 transition-all duration-300 cursor-pointer  hover:text-black;
+  }
+}
+
+/* @layer base {
+  .transition-colors,
+  .transition-opacity,
+  .transition-transform,
+  .duration-300 {
+    @apply duration-300;
+  }
+} */
+
+@layer utilities {
+  .spacing {
+    padding-left: 6rem; /* Equivalent to px-6 in Tailwind CSS */
+    padding-right: 6rem; /* Equivalent to px-6 in Tailwind CSS */
+    padding-top: 4rem; /* Equivalent to py-6 in Tailwind CSS */
+    padding-bottom: 4rem; /* Equivalent to py-6 in Tailwind CSS */
+  }
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(#1eaf0b 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}

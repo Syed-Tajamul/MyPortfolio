@@ -1,0 +1,66 @@
+.text-rotation {
+  animation: animation 7s ease infinite;
+}
+
+.inner-headings {
+  border: 0px solid #fff;
+  line-height: 70px;
+  height: 78px;
+  text-transform: capitalize;
+  overflow: hidden;
+  /* This line specifies the animation */
+  /* position: relative; You also need to specify position relative for top to work */
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  25% {
+    top: -78px;
+  }
+  45% {
+    top: -78px;
+  }
+  50% {
+    top: -156px;
+  }
+  70% {
+    top: -156px;
+  }
+  75% {
+    top: 0px;
+  }
+  85% {
+    top: -78;
+  }
+  90% {
+    top: -156;
+  }
+  95% {
+    top: 0px;
+  }
+}
+
+.hamburger {
+  transition: all 300ms ease;
+}
+
+.hamburger > div:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+  transition: all 300ms ease;
+}
+
+.hamburger > div:nth-child(2) {
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+.hamburger > div:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+  transition: all 300ms ease;
+}
