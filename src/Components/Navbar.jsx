@@ -29,7 +29,7 @@ export default function Navbar() {
         onClick={handleClick}
         className={`font-poppins max-md:h-[1px] max-md:flex-col max-md:gap-6 relative  max-md:bottom-[300px] transition-all duration-500 flex gap-10 justify-center items-center ${
           isClicked &&
-          "max-md:py-[8rem] max-md:bottom-0   transition-all duration-500 max-md:justify-center max-md:items-center "
+          "max-md:py-[8rem] max-md:bottom-[0px]   transition-all duration-500 max-md:justify-center max-md:items-center "
         }`}
       >
         <Link to="/" className=" li-hover">
