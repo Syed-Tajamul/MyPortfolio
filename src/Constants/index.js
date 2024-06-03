@@ -168,7 +168,7 @@ const questions = [
   },
   {
     id: "3",
-    question: "What Are My Skills & Strengths ?",
+    question: "What Are My Skills and Strengths ?",
     answer:
       "My expertise encompasses HTML5, CSS3, JavaScript (ES6), React.js, & Tailwind CSS, with a touch of Framer Motion. ",
     tag: "skills",

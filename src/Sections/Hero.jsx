@@ -107,7 +107,7 @@ const Hero = () => {
               ease: "easeIn",
               duration: 1,
             }}
-            className="max-md:leading-[2.7rem] dark:text-white text-darkgreen font-poppins max-lg:text-center  max-md:text-[2.50rem]    text-5xl font-bold text-wrap max-w-sm  "
+            className="max-md:leading-[2.7rem] dark:text-white text-darkgreen font-poppins max-lg:text-center  max-md:text-[2.30rem]    text-5xl font-bold text-wrap max-w-sm  "
           >
             I Craft Digital Experiences:
             <div className="max-md:mt-1 md:mt-3 inner-headings">

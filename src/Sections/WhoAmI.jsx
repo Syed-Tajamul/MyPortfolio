@@ -39,9 +39,9 @@ export default function WhoAmI() {
             ease: "easeIn",
             duration: 1,
           }}
-          className="tracking-wider font-roboto text-center text-base  max-md:leading-8  font-medium text-darkgreen dark:text-stone-400 max-w-lg leading-[2.4rem] "
+          className="tracking-wider font-poppins text-center text-base  max-md:leading-8  font-medium text-darkgreen dark:text-stone-400 max-w-lg leading-[2.4rem] "
         >
-          <span className="text-textcolor dark:text-lime-400 font-semibold text-2xl">
+          <span className="text-textcolor dark:text-lime-400 font-poppins text-2xl">
             W
           </span>
           elcome to my world of innovation and creativity! I'm{" "}
