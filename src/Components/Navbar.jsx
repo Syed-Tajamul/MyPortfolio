@@ -1,60 +1,106 @@
-import { Link } from "react-router-dom";
-import HamburgerMenu from "./HamburgerMenu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import Darkmode from "./DarkmodeButton";
 
 export default function Navbar() {
-  const [isClicked, setIsClicked] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(true);
 
-  //add these classes after finishing fixed z-30 w-full
-  function handleClick() {
-    setIsClicked(false);
-  }
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > scrollY) {
+      // Scrolling down
+      setVisible(false);
+    } else {
+      // Scrolling up
+      setVisible(true);
+    }
+    setScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <nav
-      className={`${
-        isClicked &&
-        "shadow-2xl shadow-lime-400 max-md:items-start bg-black max-md:transition-all max-md:duration-500 "
-      } fixed w-full z-50 py-4   border-[1px] border-stone-700 transition-all duration-500 px-10 flex justify-between items-start bg-black/90  text-white cursor-pointer `}
+      className={`dark:shadow-2xl shadow-lg shadow-gray-200 dark:shadow-lime-400 fixed w-full z-50 py-4 border-[1px] dark:border-stone-700 transition-all duration-500 px-10 flex justify-between items-center bg-white dark:bg-black/90 text-white cursor-pointer ${
+        visible ? "top-0" : "-top-20"
+      }`}
     >
-      <div onClick={handleClick}>
-        <Link
-          className="font-montserrat font-semibold text-2xl text-white "
+      <div>
+        <NavLink
+          className="font-poppins font-semibold text-2xl text-darkgreen dark:text-white"
           to="/"
         >
           STK
-        </Link>
+        </NavLink>
       </div>
 
       <ul
-        onClick={handleClick}
-        className={`font-poppins max-md:h-[1px] max-md:flex-col max-md:gap-6 relative  max-md:bottom-[300px] transition-all duration-500 flex gap-10 justify-center items-center ${
-          isClicked &&
-          "max-md:py-[8rem] max-md:bottom-[0px]   transition-all duration-500 max-md:justify-center max-md:items-center "
-        }`}
+        // id="nav-ul"
+        className="font-semibold dark:text-white text-textcolor max-lg:hidden font-poppins relative transition-all duration-500 flex gap-10 items-center"
       >
-        <Link to="/" className=" li-hover">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "dark:text-lime-400 text-darkgreen li-hover" : "li-hover"
+          }
+        >
           Home
-        </Link>
+        </NavLink>
         {/* <Link to="/whoAmI" className="li-hover">
           About
         </Link> */}
-        <Link to="/whatIDo" className="li-hover">
+        <NavLink
+          to="/skills"
+          className={({ isActive }) =>
+            isActive ? "dark:text-lime-400 text-darkgreen li-hover" : "li-hover"
+          }
+        >
           Expertise
-        </Link>
-        <Link to="/whatIDid" className="li-hover">
+        </NavLink>
+        <NavLink
+          to="/education"
+          className={({ isActive }) =>
+            isActive ? "dark:text-lime-400 text-darkgreen li-hover" : "li-hover"
+          }
+        >
+          Education
+        </NavLink>
+        <NavLink
+          to="/certifications"
+          className={({ isActive }) =>
+            isActive ? "dark:text-lime-400 text-darkgreen li-hover" : "li-hover"
+          }
+        >
+          Certifications
+        </NavLink>
+        <NavLink
+          to="/whatIDid"
+          className={({ isActive }) =>
+            isActive ? "dark:text-lime-400 text-darkgreen li-hover" : "li-hover"
+          }
+        >
           Work
-        </Link>
+        </NavLink>
 
         <li>
           <a
             href="mailto:syedtawseef0@gmail.com"
-            className="font-poppins tracking-wide transition-all duration-300  px-6 py-2  rounded-xl   hover:transition-all hover:duration-300 focus:outline-none focus:ring-2 focus:ring-lime-400 text-sm font-medium hover:bg-white hover:text-stone-900     border-2 border-lime-400 my-4"
+            className="bg-textcolor dark:bg-black dark:hover:bg-white text-white font-poppins tracking-wide transition-all duration-300 px-6 py-2 rounded-xl hover:transition-all hover:duration-300 focus:outline-none focus:ring-2 focus:ring-lime-400 text-sm font-medium hover:bg-white hover:text-stone-900 border-2 border-textcolor dark:border-lime-400 my-4"
           >
             Lets Connect
           </a>
         </li>
       </ul>
-      <HamburgerMenu isClicked={isClicked} setIsClicked={setIsClicked} />
+      <div>
+        <Darkmode />
+      </div>
     </nav>
   );
 }

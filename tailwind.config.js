@@ -37,6 +37,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // boxShadow: {
+      //   darkgreen: "0 0 10px rgba(0, 128, 0, 0.5)",
+      //   white: "0 0 10px rgba(255, 255, 255, 0.5)",
+      // },
+      colors: {
+        darkgreen: "#003c2f",
+        textcolor: "#22ad01",
+      },
       animation: {
         "loop-scroll": "loop-scroll 20s linear infinite",
         float: "float 2s alternate infinite",
@@ -59,4 +67,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode: "class",
 };

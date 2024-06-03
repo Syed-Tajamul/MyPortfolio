@@ -1,26 +1,10 @@
 import { useEffect, useState } from "react";
-// import {
-//   FaLaptopCode,
-//   DiResponsive,
-//   FaCss3Alt,
-//   FaTools,
-//   FaReact,
-//   FaGithub,
-//   GrDocumentPerformance,
-//   GrPerformance,
-//   SiNetlify,
-// } from "../../public/assets/icons/icons";
 
-import ExpertizeBox from "../Components/ExpertizeBox";
-import Skills from "../Components/Skills";
-import Certfications from "../Components/Cerifications";
-import Education from "../Components/Education";
-import ExpertizeNavigation from "../Components/ExpertizeNavigation";
+import Loading from "../Components/Loading";
+import { motion } from "framer-motion";
+export default function Expertise({ children, title, subtitle }) {
+  const [loading, setLoading] = useState(true);
 
-export default function Expertise() {
-  const [skills, setSkills] = useState(true);
-  const [certificate, setCertificate] = useState(false);
-  const [education, setEducation] = useState(false);
   //below useEffect hook is a gem,what it does is when this page will render it will
   //always start or render from the top using window.scrollTo() method
 
@@ -29,45 +13,64 @@ export default function Expertise() {
   }, []);
 
   //below useEffect is used for vanillaTilt js
-
-  // function handleShow() {
-  //   setHide(true);
-  // }
-  // function handleMouseOut() {
-  //   setHide(false);
-  // }
   // Run once after component mount
-
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  });
+  if (loading) return <Loading />;
   return (
     <div loading="lazy">
-      <div className="max-md:px-4 max-md:pt-20 spacing  bg-stone-900 w-full h-1/6 text-white  ">
-        <h1 className="font-montserrat max-md:text-4xl  bg-gradient-to-b from-white to-lime-400 text-transparent bg-clip-text w-full text-5xl font-semibold inline-block">
-          Expertise & Proficiencies{" "}
+      <div className="max-md:px-4 max-md:pt-20 spacing   bg-white dark:bg-stone-900 w-full h-1/6 text-darkgreen dark:text-white  ">
+        <motion.h1
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.5, // Adjusted delay to ensure h1 appears after img
+            x: { type: "spring", stiffness: 60 },
+            // opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="pt-4   text-center   font-montserrat max-md:text-4xl  bg-gradient-to-t  from-textcolor to-white dark:from-white dark:to-lime-400 text-transparent bg-clip-text w-full text-5xl font-semibold inline-block"
+        >
+          {title}
           <iframe
-            className="max-md:h-14 max-md:w-12 inline-block relative bottom-1 left-2 pointer-events-none"
+            className=" max-md:h-14 max-md:w-12 inline-block relative bottom-1 left-2 pointer-events-none"
             src="https://giphy.com/embed/C11mwFqOnigdvapIbO"
             width="70"
             height="70"
           ></iframe>
-        </h1>
+        </motion.h1>
+        {/* <h1 className="pt-6 sm:hidden max-md:text-center  font-montserrat max-md:text-[2.5rem] bg-gradient-to-t dark:from-white dark:to-lime-400 from-textcolor to-white text-transparent bg-clip-text w-full font-semibold ">
+          sadasd
+          <iframe
+            className=" max-md:h-14 max-md:w-12 inline-block relative bottom-1 left-2 pointer-events-none"
+            src="https://giphy.com/embed/C11mwFqOnigdvapIbO"
+            width="70"
+            height="70"
+          ></iframe>
+        </h1> */}
 
-        <p className="font-poppins w-full text-stone-400 text-normal font-semibold">
-          A Glimpse into My Capabilities
-        </p>
+        <motion.p
+          initial={{ x: 0, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.8, // Adjusted delay to ensure h1 appears after img
+            x: { type: "spring", stiffness: 60 },
+            // opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="text-center font-poppins w-full bg-gradient-to-t from-darkgreen to-white text-transparent bg-clip-text dark:text-stone-400 text-normal font-semibold"
+        >
+          {subtitle}
+        </motion.p>
       </div>
-      <ExpertizeBox>
-        <ExpertizeNavigation
-          skills={skills}
-          certificate={certificate}
-          education={education}
-          setSkills={setSkills}
-          setCertificate={setCertificate}
-          setEducation={setEducation}
-        />
-        {skills && <Skills skills={skills} />}
-        {certificate && <Certfications certificate={certificate} />}
-        {education && <Education education={education} />}
-      </ExpertizeBox>
+      <div className=" bg-white dark:bg-black w-full h-full flex flex-col  md:gap-10 justify-center  items-center gap-10  text-darkgreen dark:text-white  spacing md:px-0 max-md:px-0">
+        {children}
+      </div>
     </div>
   );
 }

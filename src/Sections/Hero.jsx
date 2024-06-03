@@ -50,36 +50,68 @@
 //   );
 // }
 
-import { useState } from "react";
-import { FaDownload } from "react-icons/fa";
+//from here
+
+import { useEffect, useState } from "react";
+
 import DotGrid from "../Components/Dottedgrid";
 import toast, { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
+import Loading from "../Components/Loading";
 
 const Hero = () => {
-  const [state, setState] = useState("Download Resume");
-  const [icon, setIcon] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  });
+  if (loading) return <Loading />;
 
   function handleClick() {
     setTimeout(() => {
       toast.success("resume downloaded");
-    }, 2000);
+    }, 5000);
   }
   return (
     <>
       <Toaster />
 
-      <div className="max-md:pt-40 max-md:justify-center h-screen  spacing relative items-center flex justify-center   bg-black px-8 py-12 ">
+      <div className="max-md:pt-40 max-md:justify-center h-screen  spacing relative items-center flex justify-center   bg-white dark:bg-black px-8 py-12 ">
         <div className="  max-lg:items-center   flex flex-col gap-2 justify-center items-start  text-white h-full">
-          <p className="font-poppins max-md:max-w-lg text-stone-400 text-[16px] font-[400] ">
+          <motion.p
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.6,
+              x: { type: "spring", stiffness: 60 },
+              // opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="font-poppins max-md:max-w-lg dark:text-stone-400 text-darkgreen text-[16px] font-[400] "
+          >
             Greetings! I'm{" "}
-            <span className="max-md:text-md text-[20px] text-lime-400">
+            <span className="max-md:text-md text-[20px] text-textcolor dark:text-lime-400">
               Syed Tajamul
             </span>
-          </p>
-          <h1 className="font-poppins max-lg:text-center  max-md:text-4xl    text-5xl font-bold text-wrap max-w-sm  ">
+          </motion.p>
+          <motion.h1
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1, // Adjusted delay to ensure h1 appears after img
+              x: { type: "spring", stiffness: 60 },
+              // opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="max-md:leading-[2.7rem] dark:text-white text-darkgreen font-poppins max-lg:text-center  max-md:text-[2.50rem]    text-5xl font-bold text-wrap max-w-sm  "
+          >
             I Craft Digital Experiences:
-            <div className="mt-3 inner-headings">
-              <span className="text-rotation relative text-lime-400 ">
+            <div className="max-md:mt-1 md:mt-3 inner-headings">
+              <span className="text-rotation relative text-darkgreen dark:text-lime-400 ">
                 Code 💻
                 <br />
                 Animate 🎨
@@ -87,36 +119,34 @@ const Hero = () => {
                 Optimize ⚙
                 <br />
               </span>
+              {/* <span className="text-rotation relative text-darkgreen dark:text-lime-400">
+                Develop 💻
+                <br />
+                Design 🎨
+                <br />
+                Enhance ⚙
+                <br />
+              </span> */}
             </div>
-          </h1>
-          {/* <p className="relative z-20 text-nowrap  text-2xl font-bold">
-          <span className="text-2xl text-lime-400">F</span>ront
-          <span className="text-2xl text-lime-400">E</span>nd
-          <span className="text-2xl text-lime-400">D</span>eveloper
-        </p> */}
-          {/* <p className="relative z-20  text-stone-400 text-[16px] font-semibold">
-          Empowering digital landscapes with fresh creativity and innovative
-          coding. A dedicated front end enthusiast, ready to make a mark !
-        </p> */}
+          </motion.h1>
 
-          <div className="flex gap-6 justify-center items-start">
-            <a
-              onClick={handleClick}
-              href="/assets/Resume/SyedTajamul-FrontEndDev.pdf"
-              download
-              onMouseEnter={() => {
-                setState("Download Resume");
-                setIcon(FaDownload);
-              }}
-              onMouseLeave={() => {
-                setState("Download Resume");
-                setIcon(null);
-              }}
-              className="font-poppins focus:outline-none focus:ring-2 focus:ring-lime-400 text-sm font-medium hover:bg-white hover:text-stone-900 hover:transition-all hover:duration-300 max-md:px-[3.2rem] max-md:tracking-[0.055rem] max-md:py-3 max-md:text-nowrap px-10 py-3 transition-all duration-300 rounded-xl border-2 border-lime-400"
-            >
-              <span className="inline-block">{icon}</span> {state}
-            </a>
-          </div>
+          <motion.a
+            onClick={handleClick}
+            href="/assets/Resume/SyedTajamul-FrontEndDev.pdf"
+            download
+            className="text-center bg-textcolor dark:bg-black text-white  font-poppins focus:outline-none focus:ring-2 focus:ring-lime-400 text-base font-medium dark:hover:bg- hover:bg-white hover:text-darkgreen dark:hover:bg-white dark:hover:text-stone-900 transition-all duration-300  max-md:tracking-[0.055rem] max-md:py-3 max-md:text-nowrap px-8 max-md:px-11 py-3 rounded-xl border-2 border-textcolor dark:border-lime-400"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1.4, // Adjusted delay to ensure h1 appears after img
+              x: { type: "spring", stiffness: 60 },
+              // opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+          >
+            Download Resume
+          </motion.a>
         </div>
         <DotGrid positioning={"relative left-[60px]"} />
       </div>

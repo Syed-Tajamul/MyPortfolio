@@ -8,8 +8,18 @@ const projects = [
     id: "1",
     image: "/assets/images/portfolio/laptop1.png",
     title: "portfolio",
+    technology: [
+      "Html",
+      "Tailwind css",
+      "React",
+      "React-Router-Dom",
+      "Framer Motion",
+      "Vanilla Tilt Js",
+      "React Icons",
+    ],
+    gitlink: "https://github.com/Syed-Tajamul/MyPortfolio",
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Welcome to my personal portfolio, a meticulously crafted showcase that embodies the essence of modern web development. Powered by React JS and Tailwind CSS, this dynamic platform seamlessly blends responsiveness with elegance. With a focus on user experience, I've integrated features such as dark mode and smooth animations to create an immersive journey for visitors. As you navigate through the site, you'll encounter a diverse array of projects and skills, each meticulously curated to highlight my expertise and passion for web development. From interactive elements to seamless transitions, every aspect of this portfolio reflects a commitment to excellence and professionalism. Join me on this journey as we explore the intersection of innovation and creativity in the digital landscape.",
     carousel: [
       {
         image1: "/assets/images/portfolio/laptop1.png",
@@ -23,6 +33,8 @@ const projects = [
     id: "2",
     image: "/assets/images/Fast Pizza/laptop1.png",
     title: "Fast Pizza",
+    gitlink: "https://github.com/Syed-Tajamul/React-Fast-Pizza",
+    technology: ["React", "Redux js", "Tailwind css", "React-Router-Dom"],
     description:
       "Crafted captivating UI with Tailwind CSS for seamless user experiences across devices. Implemented smooth navigation via React Router DOM and managed global state efficiently with Redux.js. Leveraged dynamic data rendering with React hooks and personalized services with geolocation integration. Optimized menu component rendering with React Router DOM loader functions.",
     carousel: [
@@ -38,8 +50,10 @@ const projects = [
     id: "3",
     image: "/assets/images/nike/laptop1.png",
     title: "nike",
+    gitlink: "https://github.com/Syed-Tajamul/Nike_React-",
+    technology: ["React", "Tailwind css", "Framer Motion"],
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Introducing the Nike Project, a sleek and dynamic web application crafted with React. Featuring smooth animations powered by Framer Motion, this project showcases the best of modern web development. Dive into an engaging and interactive experience that highlights my ability to create visually stunning and highly functional web applications",
     carousel: [
       {
         image1: "/assets/images/nike/laptop1.png",
@@ -53,8 +67,10 @@ const projects = [
     id: "4",
     image: "/assets/images/worldwise/laptop1.png",
     title: "worldwise",
+    gitlink: "https://github.com/Syed-Tajamul/React-worldwise",
+    technology: ["React", "React-Router-Dom", "Context Api", "Leaflet-Library"],
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "WorldWise is a beautifully crafted web application that allows users to document and share their travel experiences. Built with React, this app provides a seamless and interactive user experience. After logging in, users can explore an interactive map powered by the Leaflet library. By clicking on a location they have visited, users can place a marker on the map. A popup box then allows them to input the date of their visit and share their experiences about the location. The app supports adding new locations, editing entries, and deleting markers, all while ensuring smooth navigation with React Router DOM and efficient state management with Context API. Enjoy documenting your travels with this intuitive and visually appealing application.",
     carousel: [
       {
         image1: "/assets/images/worldwise/laptop1.png",
@@ -67,9 +83,11 @@ const projects = [
   {
     id: "5",
     image: "/assets/images/quiz/laptop1.png",
-    title: "quiz",
+    title: "React Quiz",
+    gitlink: "https://github.com/Syed-Tajamul/react-quiz",
+    technology: ["React", "UseReducer", "Context Api"],
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "React Quiz is an engaging quiz application built with React and Context API, primarily utilizing the useReducer hook for state management. Featuring a beautiful and intuitive design, this app allows users to start a quiz where a timer begins immediately, adding an element of challenge. The application tracks the score and shows a question progress bar, providing a seamless quiz-taking experience. At the end of the quiz, users receive their final results, making it an enjoyable and efficient way to test and improve knowledge.",
     carousel: [
       {
         image1: "/assets/images/quiz/laptop1.png",
@@ -83,8 +101,10 @@ const projects = [
     id: "6",
     image: "/assets/images/UsePopcorn/laptop1.png",
     title: "UsePopcorn",
+    gitlink: "https://github.com/Syed-Tajamul/usePopcorn",
+    technology: ["Html", "Css", "React", "UseEffect"],
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Welcome to UsePopcorn, a sophisticated web application meticulously crafted with React, designed to enhance your movie-watching experience. Seamlessly navigate through a vast movie database with a user-friendly search bar that enables you to find your favorite movies with ease. Once you've found a movie of interest, click on it to reveal a detailed description, providing valuable insights and information But that's just the beginning. UsePopcorn goes beyond basic functionality by offering advanced features such as the ability to add movies to your, Watch-Later  list, ensuring you never miss a must-see film. What's more, our innovative rating system, featuring beautiful star components, allows you to express your opinion and share your feedback with others.With UsePopcorn, the possibilities are endless. Add as many movies as you like, effortlessly manage your watchlist, and remove entries with just a click. Whether you're a casual moviegoer or a dedicated cinephile, UsePopcorn is your ultimate companion for discovering, organizing, and enjoying movies like never before",
     carousel: [
       {
         image1: "/assets/images/UsePopcorn/laptop1.png",
@@ -98,8 +118,10 @@ const projects = [
     id: "7",
     image: "/assets/images/The Atomic Blog/laptop1.png",
     title: "The Atomic Blog",
+    technology: ["Html", "Css", "React"],
+    gitlink: "https://github.com/Syed-Tajamul",
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Welcome to the Atomic Blog, a minimalist yet powerful web app crafted with React, simplifying the blogging experience for readers and writers alike. Dive into a curated collection of atomic posts, each meticulously crafted to deliver maximum impact. Effortlessly search and explore content using our intuitive search bar, ensuring you find what you're looking for with ease. Immerse yourself in a captivating reading experience, exploring thought-provoking musings and informative articles. Engage with interactive features like adding posts to your watch-Later list and rating them using our sleek star rating system, offering valuable feedback to authors and readers. Create and share your thoughts effortlessly by composing your post title and body, seamlessly becoming part of the Atomic Blog universe with just a click.",
     carousel: [
       {
         image1: "/assets/images/The Atomic Blog/laptop1.png",
@@ -113,8 +135,10 @@ const projects = [
     id: "8",
     image: "/assets/images/eatnsplit/laptop1.png",
     title: "eatnsplit",
+    gitlink: "https://github.com/Syed-Tajamul/EAT-n-SPLIT",
+    technology: ["Html", "Css", "React"],
     description:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Have you ever been out to eat with friends and found yourself in that awkward moment of deciding who should foot the bill? Say goodbye to those uncomfortable situations with Eat n Split! This user-friendly web app, created with React, takes the stress out of splitting bills among friends. Just add your friends, and Eat n Split will show you exactly who owes what. So the next time you're dining out with friends, you can focus on enjoying the meal instead of worrying about who pays the bill.",
     carousel: [
       {
         image1: "/assets/images/eatnsplit/laptop1.png",
@@ -148,7 +172,7 @@ const questions = [
     answer:
       "My expertise encompasses HTML5, CSS3, JavaScript (ES6), React.js, & Tailwind CSS, with a touch of Framer Motion. ",
     tag: "skills",
-    link: "/whatIDo",
+    link: "/skills",
     logo: GiSkills,
   },
   {
@@ -287,3 +311,19 @@ const skills = [
   },
 ];
 export { skills };
+const education = [
+  {
+    image: "/assets/icons/online-education.png",
+    title: "Masters in computer applications",
+    institute:
+      " Islamic University Of Science And Technology Awantipora,Pulwama",
+    duration: "2020-2023",
+  },
+  {
+    image: "/assets/icons/bachelor.png",
+    title: "Bachelors in computer applications",
+    institute: "Masters Institute Of Information And Technology ,Pulwama",
+    duration: " 2016-2020",
+  },
+];
+export { education };

@@ -22,6 +22,10 @@ import { RiArrowDropUpLine } from "react-icons/ri";
 import { CiUser } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
+import { GoStack } from "react-icons/go";
+import { GrProjects } from "react-icons/gr";
+import { IoIosMail } from "react-icons/io";
 export {
   FaLaptopCode,
   DiResponsive,
@@ -47,4 +51,8 @@ export {
   CiUser,
   CiLight,
   MdDarkMode,
+  FaHome,
+  GoStack,
+  GrProjects,
+  IoIosMail,
 };

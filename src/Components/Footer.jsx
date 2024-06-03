@@ -4,7 +4,7 @@ import { Form, Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="relative px-10 py-4 h-full bg-gradient-to-br from-stone-900 to-black ">
+    <div className="  bg-gradient-to-t from-white to-textcolor/50 relative px-10 py-4 h-full dark:bg-gradient-to-br dark:from-stone-900 dark:to-black ">
       {/* <div className="flex justify-center items-center gap-4 pt-20">
         <div className="flex flex-col gap-6 justify-center items-center">
           <h1 className="bg-gradient-to-b from-white to-lime-400 text-transparent bg-clip-text text-5xl font-bold">
@@ -82,23 +82,27 @@ export default function Footer() {
         </div>
         <div className="w-[1px] h-30 bg-stone-700 mt-10"></div>
       </div> */}
-      <div className="font-montserrat max-md:flex-col max-md:gap-4 flex justify-between text-white ">
+
+      {/*upto below*/}
+      <div className="font-montserrat max-md:flex-col max-md:gap-4 flex justify-between dark:text-white text-darkgreen ">
         <Link
-          className="font-montserrat max-md:hidden flex justify-center items-center font-semibold text-2xl text-white"
+          className="font-montserrat max-md:hidden flex justify-center items-center font-semibold text-2xl text-darkgreen dark:text-white"
           to="/"
         >
           STK
         </Link>
-        <div className="max-md:tracking-normal tracking-wider font-medium  leading-[18px] flex flex-col gap-2 justify-center flex-1 items-center text-sm text-stone-400">
+        <div className="max-md:tracking-normal tracking-wider font-medium  leading-[18px] flex flex-col gap-2 justify-center flex-1 items-center text-sm text-darkgreen dark:text-stone-400">
           <p className="text-[15px]">
-            <span className="font-roboto text-white font-medium">
+            <span className="font-roboto text-darkgreen dark:text-white font-medium">
               &copy; 2024 ,Syed Tajamul
             </span>
             . All rights reserved.
           </p>
           <p className="max-md:hidden">
             Website designed by{" "}
-            <span className="text-white font-medium">Syed Tajamul</span>
+            <span className="text-darkgreen dark:text-white font-medium">
+              Syed Tajamul
+            </span>
           </p>
         </div>
         <div className=" flex gap-3 justify-center items-center">

@@ -11,6 +11,9 @@
   /* This line specifies the animation */
   /* position: relative; You also need to specify position relative for top to work */
 }
+/* #nav-ul a.active {
+  color: yellow;
+} */
 
 @keyframes animation {
   0%,
@@ -63,4 +66,17 @@
 .hamburger > div:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
   transition: all 300ms ease;
+}
+/* html {
+  scrollbar-width: thin;
+  scrollbar-color: white black;
+} */
+html::-webkit-scrollbar {
+  width: 5px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+html::-webkit-scrollbar-track {
+  background-color: black;
 }

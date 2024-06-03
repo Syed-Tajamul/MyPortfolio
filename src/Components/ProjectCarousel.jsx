@@ -6,7 +6,7 @@ export default function ProjectCarousel({ carousel, setBigPic }) {
   return (
     <div className="flex space-x-16 animate-loop-scroll ">
       <div
-        className="max-sm:h-[200px] max-sm:w-[200px] h-[268px] w-[268px] cursor-pointer"
+        className="max-sm:h-[200px] max-sm:w-[220px] h-[268px] w-[268px] cursor-pointer"
         onClick={() => handleClick(1)}
       >
         <img
@@ -16,7 +16,7 @@ export default function ProjectCarousel({ carousel, setBigPic }) {
         />
       </div>
       <div
-        className="max-sm:h-[200px] max-sm:w-[200px] h-[268px] w-[268px] cursor-pointer"
+        className="max-sm:h-[200px] max-sm:w-[220px] h-[268px] w-[268px] cursor-pointer"
         onClick={() => handleClick(2)}
       >
         <img
@@ -26,7 +26,7 @@ export default function ProjectCarousel({ carousel, setBigPic }) {
         />
       </div>
       <div
-        className="max-sm:h-[200px] max-sm:w-[200px] h-[268px] w-[268px] cursor-pointer"
+        className="max-sm:h-[200px] max-sm:w-[220px] h-[268px] w-[268px] cursor-pointer"
         onClick={() => handleClick(3)}
       >
         <img
@@ -36,7 +36,7 @@ export default function ProjectCarousel({ carousel, setBigPic }) {
         />
       </div>
       <div
-        className="max-sm:h-[200px] max-sm:w-[200px] h-[268px] w-[268px] cursor-pointer"
+        className="max-sm:h-[200px] max-sm:w-[220px] h-[268px] w-[268px] cursor-pointer"
         onClick={() => handleClick(4)}
       >
         <img

@@ -3,22 +3,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
   .li-hover {
-    @apply hover:text-lime-400  transition-all duration-300 hover:transition-all hover:duration-300;
+    @apply dark:hover:text-lime-400 hover:text-darkgreen  transition-all duration-300 hover:transition-all hover:duration-300;
   }
   .card-div {
-    @apply max-lg:justify-center  max-lg:py-4 max-lg:w-[346px]   mb-10  bg-stone-900 transition-colors  duration-300 hover:transition-colors hover:duration-300  cursor-pointer hover:bg-white/10  w-[300px] h-[370px]  rounded-md flex flex-col justify-start items-center gap-4 pt-10;
+    @apply dark:hover:bg-white/10  max-lg:justify-center  max-lg:py-2 max-lg:w-[346px] max-md:h-[300px]  mb-10  dark:bg-stone-950 bg-white transition-colors  duration-300 hover:transition-colors hover:duration-300  cursor-pointer hover:bg-textcolor/30  w-[300px] h-[370px]  rounded-md flex flex-col justify-center items-center gap-5 pt-10;
   }
   .container-card-div {
     @apply md:grid-cols-2  gap-8  grid lg:grid-cols-3  max-md:flex max-md:flex-col max-md:justify-center  max-md:items-center max-lg:items-center;
   }
   .project-div {
-    @apply md:w-full max-md:w-full max-md:h-[260px] relative hover:scale-95 bg-white  w-[330px] h-[280px] rounded-lg flex flex-col gap-4 px-4 py-6   hover:transition-all hover:duration-300 transition-all duration-300 cursor-pointer  hover:text-black;
+    @apply hover:cursor-default shadow-lg shadow-darkgreen dark:shadow-stone-700  max-md:px-3 md:w-full max-md:w-full max-md:h-[260px] relative  bg-textcolor/50 border-[1px] border-white dark:border-stone-700 dark:bg-black    w-[330px] h-[280px] rounded-lg flex flex-col gap-4 px-4 py-6   hover:transition-all hover:duration-300 transition-all duration-300   hover:text-black;
   }
 }
 
-/* @layer base {
+/* @layer base 
   .transition-colors,
   .transition-opacity,
   .transition-transform,

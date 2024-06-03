@@ -22,11 +22,11 @@ export default function ExpertizeNavigation({
     setCertificate(false);
   }
   return (
-    <div className="font-poppins flex justify-between items-center gap-10  mx-auto border-[1px] bg-stone-400/10 px-4 py-2 rounded-lg">
+    <div className="font-poppins flex justify-between items-center gap-10  mx-auto border-[1px] border-textcolor dark:border-stone-700 bg-white dark:bg-stone-400/10 px-4 py-2 rounded-lg">
       <span
         onMouseOver={handleSkills}
         className={`  cursor-pointer  text-sm font-medium   hover:transition-all hover:duration-300  transition-all duration-300 ${
-          skills && "text-lime-400 underline"
+          skills && "text-textcolor dark:text-lime-400 underline"
         }`}
       >
         Skills
@@ -34,7 +34,7 @@ export default function ExpertizeNavigation({
       <span
         onMouseOver={handleCourses}
         className={`cursor-pointer  text-sm font-medium  hover:transition-all hover:duration-300  transition-all duration-300  ${
-          education && "text-lime-400 underline"
+          education && "text-textcolor dark:text-lime-400 underline"
         }`}
       >
         Education
@@ -42,7 +42,7 @@ export default function ExpertizeNavigation({
       <span
         onMouseOver={handleCertifications}
         className={`cursor-pointer  text-sm font-medium  hover:transition-all hover:duration-300  transition-all duration-300  ${
-          certificate && "text-lime-400 underline"
+          certificate && "text-textcolor dark:text-lime-400 underline"
         }`}
       >
         Certfications
