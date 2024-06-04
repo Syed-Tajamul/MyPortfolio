@@ -8,7 +8,7 @@ import { FaAward } from "react-icons/fa6";
 export default function MobileNav() {
   return (
     <div className="lg:hidden bg-white dark:bg-gradient-to-tr  dark:from-stone-900 dark:to-black pt-[82px] cursor-pointer flex justify-center items-center">
-      <div className="  fixed z-50 bottom-4  text-white dark:text-lime-400 font-normal font-poppins border-[1px] border-textcolor dark:border-stone-400 text-lg   w-[96%]  flex items-center justify-around dark:bg-black bg-darkgreen bg-opacity-50 dark:bg-opacity-30 py-4 rounded-2xl backdrop-blur-sm">
+      <div className="fixed z-50 bottom-4  text-white dark:text-lime-400 font-normal font-poppins border-[1px] border-textcolor dark:border-stone-400 text-lg   w-[96%]  flex items-center justify-around dark:bg-black bg-darkgreen bg-opacity-50 dark:bg-opacity-30 py-4 rounded-2xl backdrop-blur-sm">
         <NavLink
           to="/"
           className={({ isActive }) =>

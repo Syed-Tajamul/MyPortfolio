@@ -11,9 +11,9 @@
 //   });
 //   //below useEffect hook is a gem,what it does is when this page will render it will
 //   //always start or render from the top using window.scrollTo() method
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, []);
+// useEffect(() => {
+//   window.scrollTo(0, 0);
+// }, []);
 //   return (
 //     <div
 //       className="relative h-screen w-full bg-black flex spacing"
@@ -61,12 +61,15 @@ import Loading from "../Components/Loading";
 
 const Hero = () => {
   const [loading, setLoading] = useState(true);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
   });
+
   if (loading) return <Loading />;
 
   function handleClick() {
@@ -74,14 +77,15 @@ const Hero = () => {
       toast.success("resume downloaded");
     }, 5000);
   }
+
   return (
     <>
       <Toaster />
 
-      <div className="max-md:pt-40 max-md:justify-center h-screen  spacing relative items-center flex justify-center   bg-white dark:bg-black px-8 py-12 ">
+      <div className=" max-md:justify-center h-screen  spacing relative items-center flex justify-center   bg-white dark:bg-black px-8 py-12 ">
         <div className="  max-lg:items-center   flex flex-col gap-2 justify-center items-start  text-white h-full">
           <motion.p
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
               delay: 0.6,
@@ -98,7 +102,7 @@ const Hero = () => {
             </span>
           </motion.p>
           <motion.h1
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
               delay: 1, // Adjusted delay to ensure h1 appears after img
@@ -119,14 +123,6 @@ const Hero = () => {
                 Optimize ⚙
                 <br />
               </span>
-              {/* <span className="text-rotation relative text-darkgreen dark:text-lime-400">
-                Develop 💻
-                <br />
-                Design 🎨
-                <br />
-                Enhance ⚙
-                <br />
-              </span> */}
             </div>
           </motion.h1>
 
@@ -135,7 +131,7 @@ const Hero = () => {
             href="/assets/Resume/SyedTajamul-FrontEndDev.pdf"
             download
             className="text-center bg-textcolor dark:bg-black text-white  font-poppins focus:outline-none focus:ring-2 focus:ring-lime-400 text-base font-medium dark:hover:bg- hover:bg-white hover:text-darkgreen dark:hover:bg-white dark:hover:text-stone-900 transition-all duration-300  max-md:tracking-[0.055rem] max-md:py-3 max-md:text-nowrap px-8 max-md:px-11 py-3 rounded-xl border-2 border-textcolor dark:border-lime-400"
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
               delay: 1.4, // Adjusted delay to ensure h1 appears after img
