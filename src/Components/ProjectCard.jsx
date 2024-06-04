@@ -39,7 +39,7 @@ export default function ProjectCard({ project }) {
             loading="lazy"
             src={image}
             alt="project1"
-            className="p-2 transition-all duration-300 hover:transition-all hover:duration-300 hover:scale-105 w-full h-full rounded-3xl border-[1px] border-white dark:border-stone-400"
+            className="p-2 transition-all duration-300 hover:transition-all hover:duration-300 hover:scale-105 w-full h-full rounded-3xl border-[1px] border-textcolor dark:border-stone-400"
           />
         </Link>
       </motion.div>
@@ -54,7 +54,7 @@ export default function ProjectCard({ project }) {
             ease: "easeIn",
             duration: 1,
           }}
-          className="text-nowrap font-montserrat text-center  font-semibold text-base uppercase text-white dark:text-stone-400"
+          className="text-nowrap font-montserrat text-center  font-semibold text-base uppercase text-textcolor dark:text-stone-400"
         >
           {title}
         </motion.h1>
@@ -71,7 +71,7 @@ export default function ProjectCard({ project }) {
           }}
           href={gitlink}
         >
-          <FaGithub className="cursor-pointer dark:text-stone-400 text-white w-5 h-5 transition-all duration-300 hover:scale-125 hover:transition-all hover:duration-300 " />
+          <FaGithub className="cursor-pointer dark:text-stone-400 text-textcolor w-5 h-5 transition-all duration-300 hover:scale-125 hover:transition-all hover:duration-300 " />
         </motion.a>
       </div>
     </motion.div>

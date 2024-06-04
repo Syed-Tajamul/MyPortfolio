@@ -47,7 +47,7 @@ export default function Projects({ clicked, setClicked }) {
           A glimpse into My Project Gallery
         </p>
       </div>
-      <div className="bg-white dark:bg-black  w-full spacing    max-md:px-8 ">
+      <div className="bg-white dark:bg-black  w-full spacing    max-md:px-3 ">
         <div className=" sm:grid-cols-2  max-sm:grid-cols-1 grid gap-6 max-md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             return (
