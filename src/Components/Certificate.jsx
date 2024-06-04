@@ -127,7 +127,7 @@ export default function Certificate({ certificate }) {
   return (
     <div
       ref={tiltRef}
-      className=" max-md:w-[340px] max-md:h-full max-md:py-6 bg-white dark:bg-stone-950 shadow-lg dark:shadow-white shadow-textcolor hover:backdrop-blur-3xl transition-colors duration-300 hover:transition-colors hover:duration-300 cursor-pointer dark:hover:bg-white/10 w-[300px] h-[350px]  rounded-md flex flex-col justify-center items-center gap-4 pt-10 hover:bg-textcolor/30"
+      className=" max-md:w-[340px] max-md:h-full max-md:py-6 bg-white dark:bg-stone-950 shadow-lg dark:shadow-white shadow-textcolor hover:backdrop-blur-3xl transition-colors duration-300 hover:transition-colors hover:duration-300 cursor-pointer dark:hover:bg-white/10 w-[300px] h-[350px]  rounded-md flex flex-col justify-center items-center gap-4 pt-10 hover:bg-textcolor/30 border-[1px] border-textcolor/40 dark:border-stone-700"
     >
       <motion.h1
         initial={{ x: 0, opacity: 0 }}
