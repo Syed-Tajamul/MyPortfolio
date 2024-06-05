@@ -11,7 +11,7 @@ export default function Skills() {
       giphy="https://giphy.com/embed/C11mwFqOnigdvapIbO"
       w="70"
       h="70"
-      mobileHeight="14"
+      mobileHeight="12"
       mobileWidth="12"
     >
       <div className="container-card-div ">

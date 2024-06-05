@@ -45,8 +45,14 @@ export default function Expertise({
           className="pt-4   text-center   font-montserrat max-md:text-4xl  bg-gradient-to-t  from-textcolor to-white dark:from-white dark:to-lime-400 text-transparent bg-clip-text w-full text-5xl font-semibold inline-block"
         >
           {title}
-          <iframe
+          {/* <iframe
             className={`max-md:h-${mobileHeight} max-md:w-${mobileWidth} inline-block relative bottom-1 left-2 pointer-events-none`}
+            src={giphy}
+            width={w}
+            height={h}
+          ></iframe> */}
+          <iframe
+            className={`inline-block relative bottom-1 left-2 pointer-events-none max-md: h-${mobileHeight} w-${mobileWidth}`}
             src={giphy}
             width={w}
             height={h}

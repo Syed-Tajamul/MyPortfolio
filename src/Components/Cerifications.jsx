@@ -11,7 +11,7 @@ export default function Certifications() {
       w="84"
       h="84"
       mobileHeight="14"
-      mobileWidth="12"
+      mobileWidth="14"
     >
       <div className="max-md:grid-cols-1 grid lg:grid-cols-3 grid-cols-2 gap-8 mx-auto  relative  md:grid-cols-2">
         <Toaster />

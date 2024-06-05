@@ -10,8 +10,8 @@ export default function Educations() {
       giphy="https://giphy.com/embed/yrYcBBMG9F9tLwSDrM"
       w="82"
       h="82"
-      mobileHeight="14"
-      mobileWidth="13"
+      mobileHeight="12"
+      mobileWidth="14"
     >
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
         {education.map((el) => {
