@@ -84,9 +84,9 @@ export default function Footer() {
       </div> */}
 
       {/*upto below*/}
-      <div className="font-montserrat max-md:flex-col max-md:gap-4 flex justify-between dark:text-white text-darkgreen ">
+      <div className="font-NotoSans max-md:flex-col max-md:gap-4 flex justify-between dark:text-white text-darkgreen ">
         <Link
-          className="font-montserrat max-md:hidden flex justify-center items-center font-semibold text-2xl text-darkgreen dark:text-white"
+          className="font-NotoSans max-md:hidden flex justify-center items-center font-semibold text-2xl text-darkgreen dark:text-white"
           to="/"
         >
           STK

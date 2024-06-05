@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       <div>
         <NavLink
-          className="font-poppins font-semibold text-2xl text-darkgreen dark:text-white"
+          className="font-NotoSans font-semibold text-2xl text-darkgreen dark:text-white"
           to="/"
         >
           STK

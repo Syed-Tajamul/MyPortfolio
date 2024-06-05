@@ -63,6 +63,7 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        NotoSans: ["Noto Sans", "sans - serif"],
       },
     },
   },
