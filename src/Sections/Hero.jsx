@@ -1,3 +1,4 @@
+//commented code can b used in future
 // import { useTypewriter } from "react-simple-typewriter";
 // import { Stars } from "@react-three/drei";
 // import { Canvas } from "@react-three/fiber";
@@ -50,8 +51,6 @@
 //   );
 // }
 
-//from here
-
 import { useEffect, useState } from "react";
 
 import DotGrid from "../Components/Dottedgrid";
@@ -63,11 +62,7 @@ const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     alert("hey u r liking my work");
-  //   }, 120000);
-  // }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);

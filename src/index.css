@@ -19,15 +19,6 @@
   }
 }
 
-/* @layer base 
-  .transition-colors,
-  .transition-opacity,
-  .transition-transform,
-  .duration-300 {
-    @apply duration-300;
-  }
-} */
-
 @layer utilities {
   .spacing {
     padding-left: 6rem; /* Equivalent to px-6 in Tailwind CSS */

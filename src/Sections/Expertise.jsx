@@ -52,16 +52,6 @@ export default function Expertise({
             height={h}
           ></iframe>
         </motion.h1>
-        {/* <h1 className="pt-6 sm:hidden max-md:text-center  font-montserrat max-md:text-[2.5rem] bg-gradient-to-t dark:from-white dark:to-lime-400 from-textcolor to-white text-transparent bg-clip-text w-full font-semibold ">
-          sadasd
-          <iframe
-            className=" max-md:h-14 max-md:w-12 inline-block relative bottom-1 left-2 pointer-events-none"
-            src="https://giphy.com/embed/C11mwFqOnigdvapIbO"
-            width="70"
-            height="70"
-          ></iframe>
-        </h1> */}
-
         <motion.p
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

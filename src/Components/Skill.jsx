@@ -81,9 +81,6 @@ export default function Skill({ skill }) {
       >
         {title}
       </motion.h1>
-      {/* <p className="px-4 text-center  text-stone-400 text-sm font-semibold">
-        {description}
-      </p> */}
       <motion.p
         initial={{ x: 0, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}

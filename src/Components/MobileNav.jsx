@@ -1,7 +1,6 @@
 import { FaHome } from "react-icons/fa";
 import { GoStack } from "react-icons/go";
 import { GrProjects } from "react-icons/gr";
-// import { IoIosMail } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import { FaUserGraduate } from "react-icons/fa";
 import { FaAward } from "react-icons/fa6";

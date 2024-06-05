@@ -41,10 +41,7 @@ export default function Navbar() {
         </NavLink>
       </div>
 
-      <ul
-        // id="nav-ul"
-        className="font-semibold dark:text-white text-textcolor max-lg:hidden font-poppins relative transition-all duration-500 flex gap-10 items-center"
-      >
+      <ul className="font-semibold dark:text-white text-textcolor max-lg:hidden font-poppins relative transition-all duration-500 flex gap-10 items-center">
         <NavLink
           to="/"
           className={({ isActive }) =>

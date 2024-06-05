@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-// import cn from "../Utils/cn";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 export const MacbookScroll = ({ technology, title, description, image }) => {
@@ -331,15 +329,6 @@ export const MacbookScroll = ({ technology, title, description, image }) => {
                 &rarr;
               </span>
             </div>
-            {/* <div className="mx-auto w-[10%] overflow-hidden  h-full">
-            <SpeakerGrid />
-          </div> */}
-            {/* <div className="mx-auto w-[80%] h-full">
-            <Keypad />
-          </div> */}
-            {/* <div className="mx-auto w-[10%] overflow-hidden  h-full">
-            <SpeakerGrid />
-          </div> */}
           </div>
           <Trackpad />
         </div>
@@ -467,8 +456,6 @@ export const Lid = ({ scaleX, scaleY, rotate, translate, image }) => {
           loading="lazy"
           className="absolute rounded-lg inset-0  h-full w-full"
         />
-        {/* <img src={image} alt="image" /> */}
-        {/* <div className="absolute rounded-lg inset-0 h-full w-full bg-lime-400"></div> */}
       </motion.div>
     </div>
   );
@@ -484,26 +471,5 @@ export const Trackpad = () => {
     ></div>
   );
 };
-
-// const SpeakerGrid = () => {
-//   return (
-//     <div className="grid grid-cols-1 gap-y-2 my-2 h-full justify-items-center ">
-//       {[...Array(6)].map((_, i) => (
-//         <div
-//           key={i}
-//           className={cn(
-//             "rounded-md bg-gradient-to-br from-black via-neutral-900 to-95% h-[10px] w-[5px]"
-//           )}
-//         ></div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// const GradientBG = () => {
-//   return (
-//     <div className="h-64 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-//   );
-// };
 
 export default MacbookScroll;

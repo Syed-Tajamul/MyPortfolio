@@ -1,20 +1,3 @@
-// import { useState } from "react";
-// import { CiLight } from "react-icons/ci";
-// import { MdDarkMode } from "react-icons/md";
-
-// export default function DarkmodeButton() {
-//   const [light, setLight] = useState(false);
-//   return (
-//     <button
-//       onClick={() => {
-//         setLight((prev) => !prev);
-//       }}
-//       className="px-2 py-2 rounded-lg border-[1px] border-lime-400 transition-all duration-300"
-//     >
-//       {light ? <CiLight /> : <MdDarkMode />}
-//     </button>
-//   );
-// }
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -51,8 +34,6 @@ const SliderToggle = ({ selected, setSelected }) => {
         }}
       >
         <FiSun className="relative z-10 text-lg md:text-xl" />
-        {/* <FiMoon className="relative z-10 text-lg md:text-sm" /> */}
-        {/* <span className="relative z-10">Light</span> */}
       </button>
       <button
         className={` ${TOGGLE_CLASSES} ${
@@ -64,8 +45,6 @@ const SliderToggle = ({ selected, setSelected }) => {
         }}
       >
         <FiMoon className="relative z-10 text-lg md:text-xl" />
-        {/* <FiSun className="relative z-10 text-lg md:text-sm" /> */}
-        {/* <span className="relative z-10">Dark</span> */}
       </button>
       <div
         className={`absolute inset-0 z-0 flex ${
