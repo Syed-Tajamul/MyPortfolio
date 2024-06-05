@@ -5,7 +5,15 @@ import Expertise from "../Sections/Expertise";
 
 export default function Skills() {
   return (
-    <Expertise title="Proficiencies" subtitle="Showcasing My Core Strengths">
+    <Expertise
+      title="Proficiencies"
+      subtitle="Showcasing My Core Strengths"
+      giphy="https://giphy.com/embed/C11mwFqOnigdvapIbO"
+      w="70"
+      h="70"
+      mobileHeight="14"
+      mobileWidth="12"
+    >
       <div className="container-card-div ">
         <Toaster />
         {skills.map((skill) => (

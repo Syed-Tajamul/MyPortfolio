@@ -155,7 +155,7 @@ const questions = [
     id: "1",
     question: "Who am I professionally ?",
     answer:
-      "I'm Syed Tajamul Khursheed, a passionate Front-End Developer from Pulwama, Jammu & Kashmir, India. ",
+      "I'm Syed Tajamul Khursheed, known to some as Syed Tawseef, a passionate Front-End Developer from Pulwama, Jammu & Kashmir, India. ",
     logo: CiUser,
   },
 
@@ -163,7 +163,7 @@ const questions = [
     id: "2",
     question: "What's My Education ?",
     answer:
-      "I hold a Bachelor's degree in Computer Applications, which I completed in 2020, followed by the successful attainment of a Master's degree in the same field in 2023",
+      "With a Master's in Computer Applications (2023) and a Bachelor's (2020), my academic journey has been a thrilling adventure, sharpening my tech prowess and igniting my passion for innovation",
     logo: MdCastForEducation,
   },
   {

@@ -94,14 +94,14 @@ export default function Footer() {
         <div className="max-md:tracking-normal tracking-wider font-medium  leading-[18px] flex flex-col gap-2 justify-center flex-1 items-center text-sm text-darkgreen dark:text-stone-400">
           <p className="text-[15px]">
             <span className="font-roboto text-darkgreen dark:text-white font-medium">
-              &copy; 2024 ,Syed Tajamul
+              &copy; {new Date().getFullYear()} ,Syed Tajamul
             </span>
             . All rights reserved.
           </p>
           <p className="max-md:hidden">
             Website designed by{" "}
             <span className="text-darkgreen dark:text-white font-medium">
-              Syed Tajamul
+              Syed Tajamul Khursheed
             </span>
           </p>
         </div>

@@ -2,7 +2,16 @@ import { useEffect, useState } from "react";
 
 import Loading from "../Components/Loading";
 import { motion } from "framer-motion";
-export default function Expertise({ children, title, subtitle }) {
+export default function Expertise({
+  children,
+  title,
+  subtitle,
+  giphy,
+  w,
+  h,
+  mobileWidth,
+  mobileHeight,
+}) {
   const [loading, setLoading] = useState(true);
 
   //below useEffect hook is a gem,what it does is when this page will render it will
@@ -37,10 +46,10 @@ export default function Expertise({ children, title, subtitle }) {
         >
           {title}
           <iframe
-            className=" max-md:h-14 max-md:w-12 inline-block relative bottom-1 left-2 pointer-events-none"
-            src="https://giphy.com/embed/C11mwFqOnigdvapIbO"
-            width="70"
-            height="70"
+            className={`max-md:h-${mobileHeight} max-md:w-${mobileWidth} inline-block relative bottom-1 left-2 pointer-events-none`}
+            src={giphy}
+            width={w}
+            height={h}
           ></iframe>
         </motion.h1>
         {/* <h1 className="pt-6 sm:hidden max-md:text-center  font-montserrat max-md:text-[2.5rem] bg-gradient-to-t dark:from-white dark:to-lime-400 from-textcolor to-white text-transparent bg-clip-text w-full font-semibold ">

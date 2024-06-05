@@ -55,7 +55,6 @@
 import { useEffect, useState } from "react";
 
 import DotGrid from "../Components/Dottedgrid";
-import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 import Loading from "../Components/Loading";
 
@@ -64,6 +63,11 @@ const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     alert("hey u r liking my work");
+  //   }, 120000);
+  // }, []);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -72,16 +76,8 @@ const Hero = () => {
 
   if (loading) return <Loading />;
 
-  function handleClick() {
-    setTimeout(() => {
-      toast.success("resume downloaded");
-    }, 5000);
-  }
-
   return (
     <>
-      <Toaster />
-
       <div className=" max-md:justify-center h-screen  spacing relative items-center flex justify-center   bg-white dark:bg-black px-8 py-12 ">
         <div className="  max-lg:items-center   flex flex-col gap-2 justify-center items-start  text-white h-full">
           <motion.p
@@ -115,7 +111,7 @@ const Hero = () => {
           >
             I Craft Digital Experiences:
             <div className="max-md:mt-1 md:mt-3 inner-headings">
-              <span className="text-rotation relative text-darkgreen dark:text-lime-400 ">
+              <span className=" text-rotation relative text-darkgreen dark:text-lime-400 ">
                 Code 💻
                 <br />
                 Animate 🎨
@@ -127,7 +123,6 @@ const Hero = () => {
           </motion.h1>
 
           <motion.a
-            onClick={handleClick}
             href="/assets/Resume/SyedTajamul-FrontEndDev.pdf"
             download
             className="text-center bg-textcolor dark:bg-black text-white  font-poppins focus:outline-none focus:ring-2 focus:ring-lime-400 text-base font-medium dark:hover:bg- hover:bg-white hover:text-darkgreen dark:hover:bg-white dark:hover:text-stone-900 transition-all duration-300  max-md:tracking-[0.055rem] max-md:py-3 max-md:text-nowrap px-8 max-md:px-11 py-3 rounded-xl border-2 border-textcolor dark:border-lime-400"

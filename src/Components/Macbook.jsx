@@ -412,7 +412,7 @@ export const MacbookScroll = ({ technology, title, description, image }) => {
             onClick={() => {
               navigate("/whatIDid");
             }}
-            className="cursor-pointer text-2xl max-md:w-full transition-all duration-300 font-medium font-poppins hover:bg-textcolor hover:text-white dark:hover:bg-white dark:hover:text-stone-900 dark:text-stone-400 text-darkgreen  rounded-lg dark:border-lime-400 border-[1px] border-textcolor py-1 md:py-2  md:px-[11.3rem]   text-nowrap text-center "
+            className="cursor-pointer  max-md:w-full transition-all duration-300 font-medium font-poppins hover:bg-textcolor hover:text-white dark:hover:bg-white dark:hover:text-stone-900 dark:text-stone-400 text-darkgreen  rounded-lg dark:border-lime-400 border-[1px] border-textcolor py-2 md:py-2  md:px-[11.3rem]   text-nowrap text-center "
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -423,7 +423,7 @@ export const MacbookScroll = ({ technology, title, description, image }) => {
               duration: 1,
             }}
           >
-            &larr;
+            &larr; back
           </motion.button>
         </div>
       </div>
