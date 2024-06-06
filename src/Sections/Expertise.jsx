@@ -45,18 +45,13 @@ export default function Expertise({
           className="pt-4   text-center   font-montserrat max-md:text-4xl  bg-gradient-to-t  from-textcolor to-white dark:from-white dark:to-lime-400 text-transparent bg-clip-text w-full text-5xl font-semibold inline-block"
         >
           {title}
+
           {/* <iframe
-            className={`max-md:h-${mobileHeight} max-md:w-${mobileWidth} inline-block relative bottom-1 left-2 pointer-events-none`}
-            src={giphy}
-            width={w}
-            height={h}
-          ></iframe> */}
-          <iframe
             className={`inline-block relative bottom-1 left-2 pointer-events-none max-md: h-${mobileHeight} w-${mobileWidth}`}
             src={giphy}
             width={w}
             height={h}
-          ></iframe>
+          ></iframe> */}
         </motion.h1>
         <motion.p
           initial={{ x: 0, opacity: 0 }}
@@ -68,7 +63,7 @@ export default function Expertise({
             ease: "easeIn",
             duration: 1,
           }}
-          className="text-center font-poppins w-full bg-gradient-to-t from-darkgreen to-white text-transparent bg-clip-text dark:text-stone-400 text-normal font-semibold"
+          className="text-center font-poppins w-full bg-gradient-to-t from-darkgreen to-white text-transparent bg-clip-text dark:text-stone-400 text-normal font-semibold pt-3"
         >
           {subtitle}
         </motion.p>

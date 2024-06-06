@@ -11,14 +11,14 @@ export default function MobileNav() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive && "dark:text-white text-darkgreen/70 "
+            isActive ? "dark:text-white text-darkgreen/70" : ""
           }
         >
           <FaHome className="h-8 w-6 transition-all duration-300 hover:scale-125 hover:rotate-3 " />
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            isActive && "dark:text-white text-darkgreen/70 "
+            isActive ? "dark:text-white text-darkgreen/70" : ""
           }
           to="skills"
         >
@@ -26,7 +26,7 @@ export default function MobileNav() {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            isActive && "dark:text-white text-darkgreen/70 "
+            isActive ? "dark:text-white text-darkgreen/70 " : ""
           }
           to="education"
         >
@@ -34,7 +34,7 @@ export default function MobileNav() {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            isActive && "dark:text-white text-darkgreen/70 "
+            isActive ? "dark:text-white text-darkgreen/70 " : ""
           }
           to="certifications"
         >
@@ -42,7 +42,7 @@ export default function MobileNav() {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            isActive && "dark:text-white text-darkgreen/70 "
+            isActive ? "dark:text-white text-darkgreen/70 " : ""
           }
           to="whatIDid"
         >

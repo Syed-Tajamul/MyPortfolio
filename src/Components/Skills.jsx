@@ -8,11 +8,11 @@ export default function Skills() {
     <Expertise
       title="Proficiencies"
       subtitle="Showcasing My Core Strengths"
-      giphy="https://giphy.com/embed/C11mwFqOnigdvapIbO"
-      w="70"
-      h="70"
-      mobileHeight="12"
-      mobileWidth="12"
+      // giphy="https://giphy.com/embed/C11mwFqOnigdvapIbO"
+      // w="70"
+      // h="70"
+      // mobileHeight="12"
+      // mobileWidth="12"
     >
       <div className="container-card-div ">
         <Toaster />
